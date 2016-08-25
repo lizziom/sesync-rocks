@@ -11,19 +11,16 @@ first <- function(df) {         # The arguments, or input, to the function goes 
    return(result)          # Any output of the function goes here.
 }
 
+
+## Set username for Git
+system('git config --global user.name "Michael Lizzio"')
+system('git config --global user.email "lizziom@umd.edu"')
+
+
 ## Change the url for the origin repo
 
-system('git remote set-url origin ...')
+system('git remote set-url origin https://github.com/lizziom/sesync-rocks.git')
 
 ## Install missing packages
 
-requirements <- c('tidyr',
-                  'ggplot2',
-                  'RSQLite',
-                  'rmarkdown')
-missing <- setdiff(...,
-                   rownames(installed.packages()))
 
-if (...) {
-  install.packages(missing)
-}
